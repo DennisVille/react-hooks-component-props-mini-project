@@ -1,10 +1,9 @@
 import React from "react";
 import Article from "./Article";
-const ArticleList = (props) => {
-    let {postsArray} = props;
-    let articlesArray = postsArray.map((post, index) => {
+const ArticleList = ({posts}) => {
+    let articlesArray = posts.map((post, index) => {
         return (
-        <Article key = {index} title = {post.title} date = {post.date} preview = {post.preview}/>
+        <Article key = {index} title = {post.title} date = {post.date} preview = {post.preview} minutes = {post.minutes}/>
     )});
     return (
         <main>
